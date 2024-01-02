@@ -12,3 +12,9 @@ Currently, two official plugins are available:
 ### Main Focus of this is just to update few things on Tailwind & Redux Toolkit
 
 ##### Not really focused on UI much & get the job done
+
+###### Know issues:
+
+1. Id is from API itself so if same item added multiple times (Remove will behave abnormally)
+   a. React shows Key warning
+   b. If one item is removed all the items with same key will also be removed

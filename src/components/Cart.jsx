@@ -6,7 +6,6 @@ const Cart = () => {
   const cartItems = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   let cartTotal = cartItems.reduce((sum, el) => (sum += el.price), 0);
-
   return (
     <div className="h-full p-12 px-24 flex justify-between gap-4 w-full">
       <div className="w-2/3">
@@ -30,7 +29,7 @@ const Cart = () => {
                   <div>
                     <button
                       className="border bg-red-300 p-1 px-3 font-bold rounded-full"
-                      onClick={() => dispatch(removeFromCart(id))}
+                      onClick={() => dispatch(removeFromCart(item.id))}
                     >
                       X
                     </button>
@@ -45,7 +44,7 @@ const Cart = () => {
       </div>
       <div className="border p-4 flex-col flex-1 text-right w-1/3">
         <h1 className="font-bold text-xl">Cart Total</h1>
-        <h1 className="font-bold">Total: {cartTotal}</h1>
+        <h1 className="font-bold">Total: {cartTotal.toFixed()}</h1>
       </div>
     </div>
   );
