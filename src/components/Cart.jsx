@@ -44,7 +44,7 @@ const Cart = () => {
         </div>
       </div>
       <div className="border p-4 flex-col flex-1 text-right w-1/3">
-        <h1 className="font-bold text-xl">Cart Total:</h1>
+        <h1 className="font-bold text-xl">Cart Total</h1>
         <h1 className="font-bold">Total: {cartTotal}</h1>
       </div>
     </div>
